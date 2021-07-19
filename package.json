@@ -7,6 +7,8 @@
     "server:prod": "cross-env NODE_ENV=production node ./server"
   },
   "dependencies": {
+    "@small-tech/cross-platform-hostname": "^1.0.0",
+    "@small-tech/https": "^2.1.2",
     "@vitejs/plugin-vue": "^1.2.3",
     "@vue/compiler-sfc": "^3.0.11",
     "@vue/server-renderer": "^3.0.11",
