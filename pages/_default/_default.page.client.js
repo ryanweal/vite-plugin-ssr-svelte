@@ -1,10 +1,21 @@
 import { getPage } from 'vite-plugin-ssr/client'
-import { createApp } from './app'
+import App from './PageLayout.svelte'
 
-hydrate()
+const pageContext = await getPage()
 
-async function hydrate() {
-  const pageContext = await getPage()
-  const app = createApp(pageContext)
-  app.mount('#app')
-}
+console.log('Hello')
+console.log('pageContext', pageContext.Page)
+
+const app = new pageContext.Page({
+  target: document.getElementById('app'),
+  hydrate: true,
+  // props: pageContext.props
+})
+
+// hydrate()
+
+// async function hydrate() {
+//   const pageContext = await getPage()
+//   const app = createApp(pageContext)
+//   app.mount('#app')
+// }

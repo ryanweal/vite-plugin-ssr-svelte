@@ -1,15 +1,19 @@
-<template>
-  <div class="layout">
-    <div class="navigation">
-      <a href="/" class="logo">
-        <img src="./logo.svg" height="64" width="64" alt="logo" />
-      </a>
-      <a class="navitem" href="/">Home</a>
-      <a class="navitem" href="/about">About</a>
-    </div>
-    <div class="content"><slot /></div>
+<script>
+  export let data
+
+  console.log('...', data)
+</script>
+
+<div class="layout">
+  <div class="navigation">
+    <a href="/" class="logo">
+      <img src="./logo.svg" height="64" width="64" alt="logo" />
+    </a>
+    <a class="navitem" href="/">Home</a>
+    <a class="navitem" href="/about">About</a>
   </div>
-</template>
+  <div class="content">{data}<slot /></div>
+</div>
 
 <style>
 body {
@@ -22,9 +26,7 @@ body {
 a {
   text-decoration: none;
 }
-</style>
 
-<style scoped>
 .layout {
   display: flex;
   max-width: 900px;

@@ -1,6 +1,5 @@
-import { renderToString } from '@vue/server-renderer'
+import App from './PageLayout.svelte'
 import { html } from 'vite-plugin-ssr'
-import { createApp } from './app'
 import logoUrl from './logo.svg'
 
 export { render }
@@ -10,8 +9,9 @@ export { passToClient }
 const passToClient = ['pageProps', 'routeParams']
 
 async function render(pageContext) {
-  const app = createApp(pageContext)
-  const appHtml = await renderToString(app)
+  console.log(pageContext.Page)
+  const app = pageContext.Page.render(pageContext.props)
+  const appHtml = app.html
 
   // See https://vite-plugin-ssr.com/html-head
   const { documentProps } = pageContext
