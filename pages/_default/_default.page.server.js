@@ -1,6 +1,4 @@
-import App from './PageLayout.svelte'
 import { html } from 'vite-plugin-ssr'
-import logoUrl from './logo.svg'
 
 export { render }
 export { passToClient }
@@ -9,8 +7,7 @@ export { passToClient }
 const passToClient = ['pageProps', 'routeParams']
 
 async function render(pageContext) {
-  console.log(pageContext.Page)
-  const app = pageContext.Page.render(pageContext.props)
+  const app = pageContext.Page.render(pageContext)
   const appHtml = app.html
 
   // See https://vite-plugin-ssr.com/html-head
@@ -22,7 +19,7 @@ async function render(pageContext) {
     <html lang="en">
       <head>
         <meta charset="UTF-8" />
-        <link rel="icon" href="${logoUrl}" />
+        <link rel="icon" href="/logo.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="${desc}" />
         <title>${title}</title>

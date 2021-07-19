@@ -34,8 +34,12 @@ async function startServer() {
     res.status(result.statusCode).send(result.renderResult)
   })
 
-  const server = isProduction ? https.createServer({ domains: [hostname] }, app) : https.createServer(app)
-  server.listen(443, () => {
-    console.log(`Server running at https://${isProduction ? hostname : 'localhost'}`)
-  })
+  const port = process.env.PORT || 3000
+    app.listen(port)
+  console.log(`Server running at http://localhost:${port}`)
+
+  // const server = isProduction ? https.createServer({ domains: [hostname] }, app) : https.createServer(app)
+  // server.listen(443, () => {
+  //   console.log(`Server running at https://${isProduction ? hostname : 'localhost'}`)
+  // })
 }

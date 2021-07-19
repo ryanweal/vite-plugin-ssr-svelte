@@ -1,29 +1,25 @@
-<script>
-  export let data
-
-  console.log('...', data)
-</script>
-
 <div class="layout">
   <div class="navigation">
     <a href="/" class="logo">
-      <img src="./logo.svg" height="64" width="64" alt="logo" />
+      <img src="/logo.svg" height="64" width="64" alt="logo" />
     </a>
     <a class="navitem" href="/">Home</a>
     <a class="navitem" href="/about">About</a>
   </div>
-  <div class="content">{data}<slot /></div>
+  <div class="content"><slot /></div>
 </div>
 
 <style>
-body {
+:global(body) {
   margin: 0;
   font-family: sans-serif;
 }
-* {
+
+:global(*) {
   box-sizing: border-box;
 }
-a {
+
+:global(a) {
   text-decoration: none;
 }
 

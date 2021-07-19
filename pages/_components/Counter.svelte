@@ -1,5 +1,6 @@
 <script>
   let count = 0
+  const updateCounter = () => count++
 </script>
 
-<button on:click={() => count++}>{count}</button>
+<button on:click={updateCounter}>{count}</button>
