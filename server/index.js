@@ -18,7 +18,10 @@ async function startServer() {
     const vite = require('vite')
     viteDevServer = await vite.createServer({
       root,
-      server: { middlewareMode: true }
+      server: {
+        middlewareMode: true,
+        https: true
+      }
     })
     app.use(viteDevServer.middlewares)
   }
@@ -34,12 +37,12 @@ async function startServer() {
     res.status(result.statusCode).send(result.renderResult)
   })
 
-  const port = process.env.PORT || 3000
-    app.listen(port)
-  console.log(`Server running at http://localhost:${port}`)
+  // const port = process.env.PORT || 3000
+  //   app.listen(port)
+  // console.log(`Server running at http://localhost:${port}`)
 
-  // const server = isProduction ? https.createServer({ domains: [hostname] }, app) : https.createServer(app)
-  // server.listen(443, () => {
-  //   console.log(`Server running at https://${isProduction ? hostname : 'localhost'}`)
-  // })
+  const server = isProduction ? https.createServer({ domains: [hostname] }, app) : https.createServer(app)
+  server.listen(443, () => {
+    console.log(`Server running at https://${isProduction ? hostname : 'localhost'}`)
+  })
 }
