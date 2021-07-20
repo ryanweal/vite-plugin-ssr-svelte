@@ -9,6 +9,7 @@ const passToClient = ['pageProps', 'routeParams']
 async function render(pageContext) {
   const app = pageContext.Page.render(pageContext)
   const appHtml = app.html
+  const appCss = app.css.code
 
   // See https://vite-plugin-ssr.com/html-head
   const { documentProps } = pageContext
@@ -23,6 +24,7 @@ async function render(pageContext) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="${desc}" />
         <title>${title}</title>
+        <style>${appCss}</style>
       </head>
       <body>
         <div id="app">${html.dangerouslySkipEscape(appHtml)}</div>
