@@ -2,14 +2,17 @@
   import Layout from '../__layout.svelte'
 </script>
 
-<Layout>
-  <h1>About</h1>
-  <p>A colored page.</p>
-</Layout>
+<main>
+  <Layout>
+    <h1>About</h1>
+    <p>A colored page.</p>
+  </Layout>
+</main>
 
 <style>
-
-:global(.content h1), :global(.content p) {
-  color: green;
-}
+  /* Note: for * :global() to work, the component must be within
+    ===== a parent DOM element (in this case, the <main> block). */
+  * :global(h1), * :global(p) {
+    color: green;
+  }
 </style>
