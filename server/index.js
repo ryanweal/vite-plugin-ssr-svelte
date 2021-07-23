@@ -1,7 +1,5 @@
 const express = require('express')
 const { createPageRender } = require('vite-plugin-ssr')
-const https = require('@small-tech/https')
-const hostname = require('@small-tech/cross-platform-hostname')
 
 const isProduction = process.env.NODE_ENV === 'production'
 const root = `${__dirname}/..`
@@ -19,8 +17,7 @@ async function startServer() {
     viteDevServer = await vite.createServer({
       root,
       server: {
-        middlewareMode: true,
-        https: true
+        middlewareMode: true
       }
     })
     app.use(viteDevServer.middlewares)
@@ -37,12 +34,7 @@ async function startServer() {
     res.status(result.statusCode).send(result.renderResult)
   })
 
-  // const port = process.env.PORT || 3000
-  //   app.listen(port)
-  // console.log(`Server running at http://localhost:${port}`)
-
-  const server = isProduction ? https.createServer({ domains: [hostname] }, app) : https.createServer(app)
-  server.listen(443, () => {
-    console.log(`Server running at https://${isProduction ? hostname : 'localhost'}`)
-  })
+  const port = process.env.PORT || 3000
+    app.listen(port)
+  console.log(`Server running at http://localhost:${port}`)
 }
