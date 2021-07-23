@@ -4,5 +4,5 @@ const pageContext = await getPage()
 
 new pageContext.Page({
   target: document.getElementById('app'),
-  hydrate: true,
+  hydrate: true
 })
