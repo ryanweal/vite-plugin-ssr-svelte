@@ -1,21 +1,13 @@
 {
   "scripts": {
-    "dev": "npm run server",
-    "prod": "npm run build && npm run server:prod",
-    "build": "vite build && vite build --ssr",
-    "server": "node ./server",
-    "server:prod": "cross-env NODE_ENV=production node ./server"
-  },
-  "dependencies": {
-    "@small-tech/cross-platform-hostname": "^1.0.0",
-    "@small-tech/https": "^2.1.2",
-    "cross-env": "^7.0.3",
-    "express": "^4.17.1",
-    "vite": "^2.3.6",
-    "vite-plugin-ssr": "^0.2.0"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.12",
-    "svelte": "^3.38.3"
+    "@sveltejs/vite-plugin-svelte": "^1.0.9",
+    "express": "^4.18.2",
+    "vite": "^3.1.8",
+    "vite-plugin-ssr": "^0.4.40"
   }
 }

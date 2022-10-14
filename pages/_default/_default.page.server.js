@@ -1,4 +1,4 @@
-import { html } from 'vite-plugin-ssr'
+import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr"
 
 export { render }
 export { passToClient }
@@ -16,7 +16,7 @@ async function render(pageContext) {
   const title = (documentProps && documentProps.title) || 'Vite SSR app (Svelte version)'
   const desc = (documentProps && documentProps.description) || 'App using Vite + vite-plugin-ssr (Svelte version)'
 
-  return html`<!DOCTYPE html>
+  return escapeInject`<!DOCTYPE html>
     <html lang="en">
       <head>
         <meta charset="UTF-8" />
@@ -27,7 +27,7 @@ async function render(pageContext) {
         <style>${appCss}</style>
       </head>
       <body>
-        <div id="app">${html.dangerouslySkipEscape(appHtml)}</div>
+        <div id="app">${dangerouslySkipEscape(appHtml)}</div>
       </body>
     </html>`
 }

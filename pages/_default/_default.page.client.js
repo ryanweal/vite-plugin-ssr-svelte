@@ -1,8 +1,9 @@
-import { getPage } from 'vite-plugin-ssr/client'
+export { render }
 
-const pageContext = await getPage()
+async function render(pageContext) {
+  new pageContext.Page({
+    target: document.getElementById('app'),
+    //hydrate: true
+  })
+}
 
-new pageContext.Page({
-  target: document.getElementById('app'),
-  hydrate: true
-})
