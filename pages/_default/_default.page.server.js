@@ -28,13 +28,7 @@ async function render(pageContext) {
         <style>${appCss}</style>
       </head>
       <body>
-        <div id="app">
-
-          <!-- injecting appHtml here will prevent _default.page.client.js from
-          running. so if you want prerender, it will not work if you want the
-          Svelte app to run -->
-
-        </div>
+        <div id="app">${dangerouslySkipEscape(appHtml)}</div>
       </body>
     </html>`
 }
