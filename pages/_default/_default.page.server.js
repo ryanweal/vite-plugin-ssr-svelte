@@ -10,6 +10,7 @@ async function render(pageContext) {
   const app = pageContext.Page.render(pageContext)
   const appHtml = app.html
   const appCss = app.css.code
+  const appHead = app.head
 
   // See https://vite-plugin-ssr.com/html-head
   const { documentProps } = pageContext
@@ -27,7 +28,13 @@ async function render(pageContext) {
         <style>${appCss}</style>
       </head>
       <body>
-        <div id="app">${dangerouslySkipEscape(appHtml)}</div>
+        <div id="app">
+
+          <!-- injecting appHtml here will prevent _default.page.client.js from
+          running. so if you want prerender, it will not work if you want the
+          Svelte app to run -->
+
+        </div>
       </body>
     </html>`
 }
