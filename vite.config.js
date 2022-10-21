@@ -3,7 +3,17 @@ import { svelte } from '@sveltejs/vite-plugin-svelte'
 
 export default {
   publicDir: "assets",
-  plugins: [svelte(), ssr({
+  plugins: [svelte({
+    experimental: {
+      dynamicCompileOptions({filename, compileOptions}) {
+        if (!compileOptions.hydratable) {
+          return {
+            hydratable: true
+          };
+        }
+      }
+    }
+  }), ssr({
     prerender: true
   })]
 }
