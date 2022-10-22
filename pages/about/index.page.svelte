@@ -1,7 +1,10 @@
 <script>
-  import Layout from '../__layout.svelte'
-  export let pageProps
+  import MetaTags from '../_components/MetaTags.svelte';
+  import Layout from '../__layout.svelte';
+  export let pageProps;
 </script>
+
+<MetaTags title={pageProps.title} description={pageProps.body} />
 
 <main>
   <Layout>
