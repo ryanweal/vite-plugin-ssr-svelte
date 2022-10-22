@@ -1,11 +1,12 @@
 <script>
   import Layout from '../__layout.svelte'
+  export let pageProps
 </script>
 
 <main>
   <Layout>
-    <h1>About</h1>
-    <p>A colored page.</p>
+    <h1>{pageProps.title}</h1>
+    <p>{pageProps.body}</p>
   </Layout>
 </main>
 

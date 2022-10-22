@@ -5,6 +5,8 @@ async function render(pageContext) {
   new pageContext.Page({
     target: app_el,
     hydrate: true,
-    props: pageContext.pageProps
+    props: {
+      pageProps: pageContext.pageProps
+    }
   })
 }
