@@ -6,11 +6,23 @@ This module demonstrates doing fully prerendered HTML with the correct hydration
 
 Why not use SvelteKit? Using `vite-plugin-ssr` you can override pretty much everything *and* you could also add other frameworks (such as Vue, React, others) for specific routes by providing more specific `page.client.js` and `page.server.js` files.
 
+## What works out of the box
+
+This repo could be used as a starter for your next project. It is setup to do the typical framework tasks:
+
+- Create pages and components using Svelte, with hot reloading in dev
+- Prerender all content during build time
+- Hydrate the prerendered content with your Svelte components automatically with no flashes or jankyness
+- MetaTags can easily be set using the example component
+- Assets folder copied straight to the build folder so you can reference images like it was 1999 and not worry about importing them.
+
+We also include some examples of making API calls on the server-side only to fetch your data.
+
 ## Vite plugins used
 
   - [vite-plugin-ssr](https://vite-plugin-ssr.com/)
   - [vite-plugin-svelte](https://github.com/sveltejs/vite-plugin-svelte/tree/main/packages/vite-plugin-svelte)
-  - [express.js](https://expressjs.com/)
+  - [express.js](https://expressjs.com/) (used for the prerendering process)
 
 ## Install and run
 
