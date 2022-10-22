@@ -6,7 +6,7 @@
   let state_text = "Prerendered";
 
   onMount(() => {
-    state_text = "Interactive";
+    state_text = "Prerendered and interactive";
   });
 </script>
 
