@@ -1,6 +1,13 @@
 <script>
-  import Counter from './_components/Counter.svelte'
-  import Layout from './__layout.svelte'
+  import {onMount} from "svelte";
+  import Counter from './_components/Counter.svelte';
+  import Layout from './__layout.svelte';
+
+  let state_text = "Prerendered";
+
+  onMount(() => {
+    state_text = "Interactive";
+  });
 </script>
 
 <Layout>
@@ -8,6 +15,6 @@
   This page is:
   <ul>
     <li>Rendered to HTML.</li>
-    <li>Interactive. <Counter /></li>
+    <li>{state_text}. <Counter /></li>
   </ul>
 </Layout>
