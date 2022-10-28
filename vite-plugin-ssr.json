@@ -1,0 +1,7 @@
+{
+  "version": "0.4.43",
+  "usesClientRouter": false,
+  "baseUrl": "/vite-plugin-ssr-svelte/",
+  "baseAssets": null,
+  "includeAssetsImportedByServer": false
+}
