@@ -1,10 +1,14 @@
+<script>
+  const base = import.meta.env.BASE_URL;
+</script>
+
 <div class="layout">
   <div class="navigation">
     <a href="/" class="logo">
-      <img src="/logo.svg" height="64" width="64" alt="logo" />
+      <img src={`${base}logo.svg`} height="64" width="64" alt="logo" />
     </a>
-    <a class="navitem" href="/">Home</a>
-    <a class="navitem" href="/about">About</a>
+    <a class="navitem" href={`${base}`}>Home</a>
+    <a class="navitem" href={`${base}/about`}>About</a>
   </div>
   <div class="content"><slot /></div>
 </div>

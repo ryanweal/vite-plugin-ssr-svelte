@@ -7,8 +7,8 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
       - name: npm install
-        #env:
-        #  BASE_URL: ${{ secrets.BASE_URL }}
+        env:
+          BASE_URL: /vite-plugin-ssr-svelte/
         run: | 
           npm install
           npm run build
