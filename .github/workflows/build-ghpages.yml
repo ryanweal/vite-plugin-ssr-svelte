@@ -3,22 +3,25 @@ on:
   push:
     branches:
       - main
+permissions:
+  contents: write
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository code
+      - name: Check out latest code
         uses: actions/checkout@v3
-      - name: npm install
+
+      - name: Install and Build
         env:
           BASE_URL: /vite-plugin-ssr-svelte/
         run: | 
           npm install
           npm run build
+
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.4
+        uses: JamesIves/github-pages-deploy-action@4
         with:
-          branch: gh-pages
           folder: dist/client
           # Remove previous build files
           clean: true
