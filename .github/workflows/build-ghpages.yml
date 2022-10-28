@@ -1,4 +1,8 @@
-name: Build and Deploy a Branch to GH Pages
+# 1. Set the BASE_URL of your github repo below
+# 2. Go to actions -> new workflow -> this file -> which will populate the gh-pages branch
+# 3. Then go to settings -> pages -> deploy from a branch -> gh-pages (will create a 2nd built-in action not in code)
+# The second action is automatically triggered when it senses changes to gh-pages after the build is finished.
+name: Build and update gh-pages branch
 on: push
 jobs:
   build-and-deploy:
@@ -14,10 +18,13 @@ jobs:
           npm install
           npm run build
 
-      - name: Deploy
+      - name: Update gh-pages branch
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist/client
+          # The .nojekyll file must be manually created in the gh-pages branch
+          # after this action has run at least once.  It does not copy over from
+          # this repo.
           clean: true
           clean-exclude: |
             .nojekyll
