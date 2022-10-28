@@ -1,5 +1,8 @@
 name: Build and Deploy a Branch to GH Pages
-on: push
+on: 
+  push:
+    branches:
+      - main
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -12,9 +15,10 @@ jobs:
         run: | 
           npm install
           npm run build
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
+          branch: gh-pages
           folder: dist/client
           # Remove previous build files
           clean: true
