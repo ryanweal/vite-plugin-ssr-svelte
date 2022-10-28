@@ -5,6 +5,8 @@ A Svelte version of the [vite-plugin-ssr](https://vite-plugin-ssr.com/) module.
 This module demonstrates doing fully prerendered HTML with the correct hydration
 settings so that your app will load smoothly in any context.
 
+You can try it out here: https://ryanweal.github.io/vite-plugin-ssr-svelte/
+
 Why not use SvelteKit? Using `vite-plugin-ssr` you can override pretty much
 everything *and* you could also add other frameworks (such as Vue, React,
 others) for specific routes by providing more specific `page.client.js` and
