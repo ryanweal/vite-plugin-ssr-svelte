@@ -1,4 +1,5 @@
 import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr"
+const base = import.meta.env.BASE_URL
 
 export { render }
 export { passToClient }
@@ -21,7 +22,7 @@ async function render(pageContext) {
     <html lang="en">
       <head>
         <meta charset="UTF-8" />
-        <link rel="icon" href="/logo.svg" />
+        <link rel="icon" href="${base}logo.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         ${dangerouslySkipEscape(appHead)}
         <style>${appCss}</style>
