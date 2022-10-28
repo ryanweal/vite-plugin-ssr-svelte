@@ -1,21 +1,21 @@
 {
   "pages/_error.page.svelte": {
-    "file": "assets/pages/_error.page.2e5e1d5f.js",
+    "file": "assets/pages/_error.page.512f6e79.js",
     "src": "pages/_error.page.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_chunk-3b5f8fe3.js"
+      "_chunk-d37d201f.js"
     ]
   },
   "pages/index.page.svelte": {
-    "file": "assets/pages/index.page.659ef90d.js",
+    "file": "assets/pages/index.page.9ce11203.js",
     "src": "pages/index.page.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_chunk-3b5f8fe3.js",
-      "_chunk-78f82bf0.js"
+      "_chunk-d37d201f.js",
+      "_chunk-f66f84b9.js"
     ]
   },
   "pages/_default/_default.page.client.js": {
@@ -25,20 +25,20 @@
     "isDynamicEntry": true
   },
   "pages/about/index.page.svelte": {
-    "file": "assets/pages/about/index.page.bb49f07b.js",
+    "file": "assets/pages/about/index.page.59f9ba1c.js",
     "src": "pages/about/index.page.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_chunk-3b5f8fe3.js",
-      "_chunk-78f82bf0.js"
+      "_chunk-d37d201f.js",
+      "_chunk-f66f84b9.js"
     ],
     "css": [
       "assets/index.page.e221c2a1.css"
     ]
   },
   "node_modules/vite-plugin-ssr/dist/esm/client/router/entry.js": {
-    "file": "assets/entry-client-routing.aaea8bee.js",
+    "file": "assets/entry-client-routing.ecc92b52.js",
     "src": "node_modules/vite-plugin-ssr/dist/esm/client/router/entry.js",
     "isEntry": true,
     "imports": [
@@ -52,7 +52,7 @@
     ]
   },
   "node_modules/vite-plugin-ssr/dist/esm/client/entry.js": {
-    "file": "assets/entry-server-routing.052d8f3e.js",
+    "file": "assets/entry-server-routing.bf03de1b.js",
     "src": "node_modules/vite-plugin-ssr/dist/esm/client/entry.js",
     "isEntry": true,
     "imports": [
@@ -65,16 +65,16 @@
       "pages/_default/_default.page.client.js"
     ]
   },
-  "_chunk-3b5f8fe3.js": {
-    "file": "assets/chunk-3b5f8fe3.js",
+  "_chunk-d37d201f.js": {
+    "file": "assets/chunk-d37d201f.js",
     "css": [
       "assets/__layout.254de47c.css"
     ]
   },
-  "_chunk-78f82bf0.js": {
-    "file": "assets/chunk-78f82bf0.js",
+  "_chunk-f66f84b9.js": {
+    "file": "assets/chunk-f66f84b9.js",
     "imports": [
-      "_chunk-3b5f8fe3.js"
+      "_chunk-d37d201f.js"
     ]
   },
   "_chunk-665d08b3.js": {

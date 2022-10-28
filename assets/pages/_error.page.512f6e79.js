@@ -1,4 +1,4 @@
-import{S as g,i as $,s as v,_ as y,c as b,a as k,m as E,t as P,b as S,d as w,e as h,f as m,g as l,h as f,j as u,k as d,l as _,n as p,o as c}from"../chunk-3b5f8fe3.js";function x(s){let e,r,t,o;return{c(){e=f("div"),r=f("h1"),t=u("500 Internal Server Error"),o=u(`
+import{S as g,i as $,s as v,_ as y,c as b,a as k,m as E,t as P,b as S,d as w,e as h,f as m,g as l,h as f,j as u,k as d,l as _,n as p,o as c}from"../chunk-d37d201f.js";function x(s){let e,r,t,o;return{c(){e=f("div"),r=f("h1"),t=u("500 Internal Server Error"),o=u(`
   Something went wrong.`)},l(n){e=d(n,"DIV",{});var a=_(e);r=d(a,"H1",{});var i=_(r);t=p(i,"500 Internal Server Error"),i.forEach(l),o=p(a,`
   Something went wrong.`),a.forEach(l)},m(n,a){m(n,e,a),c(e,r),c(r,t),c(e,o)},d(n){n&&l(e)}}}function I(s){let e,r,t,o;return{c(){e=f("div"),r=f("h1"),t=u("404 Page Not Found"),o=u(`
   This page could not be found.`)},l(n){e=d(n,"DIV",{});var a=_(e);r=d(a,"H1",{});var i=_(r);t=p(i,"404 Page Not Found"),i.forEach(l),o=p(a,`
