@@ -1,10 +1,10 @@
 <script>
-  export let is404
-
-  console.log('404')
+  import Layout from "./__layout.svelte";
+  export let pageProps;
 </script>
 
-{#if is404}
+<Layout>
+  {#if pageProps.is404}
 <div>
   <h1>404 Page Not Found</h1>
   This page could not be found.
@@ -15,3 +15,4 @@
   Something went wrong.
 </div>
 {/if}
+</Layout>
