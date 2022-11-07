@@ -5,5 +5,5 @@
 
 <svelte:head>
 	<title>{title}</title>
-  <meta name="description" content="${description}" />
+  <meta name="description" content="{description}" />
 </svelte:head>
