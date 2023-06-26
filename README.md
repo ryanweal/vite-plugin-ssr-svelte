@@ -1,4 +1,4 @@
-# Vite + Svelte + vite-plugin-ssr static prerender demo project!
+# Vite + Svelte + vite-plugin-ssr static prerender starter project!
 
 A Svelte version of the [vite-plugin-ssr](https://vite-plugin-ssr.com/) module.
 
