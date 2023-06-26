@@ -28,5 +28,27 @@ async function render(pageContext) {
       <body>
         <div id="app">${dangerouslySkipEscape(appHtml)}</div>
       </body>
+
+      <noscript>
+        <style>
+          /* allow components to use a .no-js class corresponding with the global.csss file */
+          .no-js {
+            visibility: visible;
+          }
+          /* display a no-javascript banner */
+          html::before {
+            content: 'Please enable JavaScript to use this site!';
+            width:100%;
+            background: red;
+            color: white;
+            height: 60px;
+            font-size: 1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+         }
+        </style>
+      </noscript>
+
     </html>`
 }

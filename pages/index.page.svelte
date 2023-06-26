@@ -11,14 +11,36 @@
   });
 </script>
 
-<MetaTags title="Vite Plugin SSR Svelte Project"
-  description="Demonstration of using the Vite bundler for Svelte projects." />
+<MetaTags title="Vite-Plugin-SSR-Svelte Project"
+  description="Vite-based alternative to SvelteKit" />
 
 <Layout>
-  <h1>Welcome</h1>
-  This page is:
+  <h1>Welcome to Vite-Plugin-SSR-Svelte!</h1>
+
+  <p>This repo demonstrates how to create a static site using Svelte using Vite
+  & Vite-Plugin-SSR to produce a prerendered site of static pages. The rendering time is blazingly fast and works well on low-powered hardware.</p>
+  <p>Conisder it like an alternative to SvelteKit, but with many of the more
+  complex features disabled by default so you can enable the fancy stuff when you are ready for it.</p>
+
+ <h2>To demonstrate how this works, this page is:</h2>
+
   <ul>
     <li>Rendered to HTML.</li>
-    <li>{state_text}. <Counter /></li>
+    <li>{state_text}. Click counter: <Counter /></li>
   </ul>
+
+  <h2>Learn More</h2>
+
+  <ul>
+    <li>
+      <a href="https://github.com/ryanweal/vite-plugin-ssr-svelte">The GitHub repo for this project</a>
+    </li>
+    <li>
+      <a href="https://ryanweal.github.io/vite-plugin-ssr-svelte/">This demo page hosted on Github Pages</a>
+    </li>
+    <li>
+      <a href="https://vite-plugin-ssr.com/">Vite-Plugin-SSR docs</a>
+    </li>
+  </ul>
+
 </Layout>

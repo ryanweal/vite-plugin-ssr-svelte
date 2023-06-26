@@ -1,4 +1,5 @@
 <script>
+  import "./global.css";
   const base = import.meta.env.BASE_URL;
 </script>
 
@@ -14,18 +15,7 @@
 </div>
 
 <style>
-:global(body) {
-  margin: 0;
-  font-family: sans-serif;
-}
 
-:global(*) {
-  box-sizing: border-box;
-}
-
-:global(a) {
-  text-decoration: none;
-}
 
 .layout {
   display: flex;
