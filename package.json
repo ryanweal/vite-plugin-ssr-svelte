@@ -1,14 +1,15 @@
 {
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.9",
-    "dotenv": "^16.0.3",
+    "@sveltejs/vite-plugin-svelte": "^2.4.2",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "vite": "^3.1.8",
-    "vite-plugin-ssr": "^0.4.40"
+    "vite": "^4.3.9",
+    "vite-plugin-ssr": "^0.4.132"
   }
 }

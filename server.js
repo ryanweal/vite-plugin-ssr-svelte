@@ -1,5 +1,5 @@
-const express = require('express')
-const { renderPage } = require('vite-plugin-ssr')
+import express from 'express'
+import { renderPage } from 'vite-plugin-ssr/server'
 
 const isProduction = process.env.NODE_ENV === 'production'
 const root = `${__dirname}/..`
