@@ -1,28 +1,80 @@
 <!DOCTYPE html>
     <html lang="en">
       <head>
-        <link rel="stylesheet" type="text/css" href="/vite-plugin-ssr-svelte/assets/static/_layout.254de47c.css">
-        <link rel="stylesheet" type="text/css" href="/vite-plugin-ssr-svelte/assets/static/index.page.e221c2a1.css">
+        <link rel="stylesheet" type="text/css" href="/vite-plugin-ssr-svelte/assets/static/_layout.80e14bac.css">
+        <link rel="stylesheet" type="text/css" href="/vite-plugin-ssr-svelte/assets/static/index.page.1a170f7d.css">
         <meta charset="UTF-8" />
         <link rel="icon" href="/vite-plugin-ssr-svelte/logo.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>About</title><!-- HEAD_svelte-d06px6_START --><meta name="description" content="Sample API prefetch page with a fixed path (ie, not a catch-all route)."><!-- HEAD_svelte-d06px6_END -->
+        <title>About</title><!-- HEAD_svelte-d06px6_START --><meta name="description" content="<p>Sample API prefetch page with a fixed path (ie, not a catch-all route) and some scoped CSS for the route (using the script tag, in the Svelte file).</p>
+      <p>Currently this implements an onBeforeRender in the about/index.page.server.js file. That is the hook that injects the data into the page about/index.</p>
+      <p>If you want to do a full API implementation you will need: </p>
+      <ul>
+        <li>(1) add the prerender function to the index.page.server.js to tell it what paths to render,</li>
+        <li>(2) create a custom index.page.route.js if your routes cannot be matched by a single variable in the folder name (you can use @slug as folder name, if your slugs never has a '/' in it), then </li>
+        <li>(3) the onbeforerender to grab the data, and </li>
+        <li>(4) finally an index.page.svelte to render the goods.</li>
+      </ul>
+
+      <p>Knowing all this, you will see that this &quot;about&quot; page demo will only allow you to pull data in for this ONE path the way it is currently coded, but the above instructions would allow you to make an entire site by feeding a list of paths to be rendered to the prerender function, and then making the path name map to a specific page in the pages folder (either by renaming &quot;about&quot; to &quot;@slug&quot; or to create a index.page.route.js with a function to match paths with the list that prerender funciton has).</p>
+
+      <p>See the <a href=&quot;https://vite-plugin-ssr.com/&quot;>vite-plugin-ssr docs for more details</a>.</p>
+
+      <p>I like to do a single API call in a file (not demonstrated here) called single-hit.js that does ONLY ONE API call, caches it, and exports the results, so that the above functions can be performed at lightning speeds (if you have a limited number of pages and this won't blow out your memory, I recommend trying it!).</p>
+    "><!-- HEAD_svelte-d06px6_END -->
       </head>
       <body>
         <div id="app">
 
-<div class="layout svelte-1f2thvr"><div class="navigation svelte-1f2thvr"><a href="/vite-plugin-ssr-svelte/" class="logo svelte-1f2thvr"><img src="/vite-plugin-ssr-svelte/logo.svg" height="64" width="64" alt="logo"></a>
-    <a class="navitem svelte-1f2thvr" href="/vite-plugin-ssr-svelte/">Home</a>
-    <a class="navitem svelte-1f2thvr" href="/vite-plugin-ssr-svelte/about">About</a></div>
-  <div class="content svelte-1f2thvr"><h1 class="svelte-161zbxq">About</h1>
-  <p class="svelte-161zbxq">Sample API prefetch page with a fixed path (ie, not a catch-all route).</p></div>
+<div class="layout svelte-lblfjd"><div class="navigation svelte-lblfjd"><a href="/vite-plugin-ssr-svelte/" class="logo svelte-lblfjd"><img src="/vite-plugin-ssr-svelte/logo.svg" height="64" width="64" alt="logo"></a>
+    <a class="navitem svelte-lblfjd" href="/vite-plugin-ssr-svelte/">Home</a>
+    <a class="navitem svelte-lblfjd" href="/vite-plugin-ssr-svelte/about">About</a></div>
+  <div class="content svelte-lblfjd"><h1 class="svelte-okllp7">About</h1>
+  <div><!-- HTML_TAG_START --><p>Sample API prefetch page with a fixed path (ie, not a catch-all route) and some scoped CSS for the route (using the script tag, in the Svelte file).</p>
+      <p>Currently this implements an onBeforeRender in the about/index.page.server.js file. That is the hook that injects the data into the page about/index.</p>
+      <p>If you want to do a full API implementation you will need: </p>
+      <ul>
+        <li>(1) add the prerender function to the index.page.server.js to tell it what paths to render,</li>
+        <li>(2) create a custom index.page.route.js if your routes cannot be matched by a single variable in the folder name (you can use @slug as folder name, if your slugs never has a '/' in it), then </li>
+        <li>(3) the onbeforerender to grab the data, and </li>
+        <li>(4) finally an index.page.svelte to render the goods.</li>
+      </ul>
+
+      <p>Knowing all this, you will see that this "about" page demo will only allow you to pull data in for this ONE path the way it is currently coded, but the above instructions would allow you to make an entire site by feeding a list of paths to be rendered to the prerender function, and then making the path name map to a specific page in the pages folder (either by renaming "about" to "@slug" or to create a index.page.route.js with a function to match paths with the list that prerender funciton has).</p>
+
+      <p>See the <a href="https://vite-plugin-ssr.com/">vite-plugin-ssr docs for more details</a>.</p>
+
+      <p>I like to do a single API call in a file (not demonstrated here) called single-hit.js that does ONLY ONE API call, caches it, and exports the results, so that the above functions can be performed at lightning speeds (if you have a limited number of pages and this won't blow out your memory, I recommend trying it!).</p>
+    <!-- HTML_TAG_END --></div></div>
 </div></div>
-        <script type="module" src="/vite-plugin-ssr-svelte/assets/entries/entry-server-routing.76dcb81e.js" defer></script>
-        <link rel="modulepreload" href="/vite-plugin-ssr-svelte/assets/entries/pages_about_index.page.0a14f1d3.js" as="script" type="text/javascript">
-        <link rel="modulepreload" href="/vite-plugin-ssr-svelte/assets/chunks/chunk-b636a0bf.js" as="script" type="text/javascript">
-        <link rel="modulepreload" href="/vite-plugin-ssr-svelte/assets/chunks/chunk-98db9973.js" as="script" type="text/javascript">
+        <script type="module" src="/vite-plugin-ssr-svelte/assets/entries/entry-server-routing.45fa8cf7.js" defer></script>
+        <link rel="modulepreload" href="/vite-plugin-ssr-svelte/assets/entries/pages_about_index.page.e933999c.js" as="script" type="text/javascript">
+        <link rel="modulepreload" href="/vite-plugin-ssr-svelte/assets/chunks/chunk-2bcaf281.js" as="script" type="text/javascript">
+        <link rel="modulepreload" href="/vite-plugin-ssr-svelte/assets/chunks/chunk-68c84dc8.js" as="script" type="text/javascript">
         <link rel="modulepreload" href="/vite-plugin-ssr-svelte/assets/entries/pages_default_default.page.client.00038293.js" as="script" type="text/javascript">
         <link rel="modulepreload" href="/vite-plugin-ssr-svelte/assets/chunks/chunk-dbd83a2f.js" as="script" type="text/javascript">
-        <script id="vite-plugin-ssr_pageContext" type="application/json">{"pageContext":{"_pageId":"/pages/about/index","pageProps":{"title":"About","body":"Sample API prefetch page with a fixed path (ie, not a catch-all route)."},"routeParams":{}}}</script>
+        <script id="vite-plugin-ssr_pageContext" type="application/json">{"pageContext":{"_pageId":"/pages/about/index","pageProps":{"title":"About","body":"\u003cp>Sample API prefetch page with a fixed path (ie, not a catch-all route) and some scoped CSS for the route (using the script tag, in the Svelte file).\u003c/p>\n      \u003cp>Currently this implements an onBeforeRender in the about/index.page.server.js file. That is the hook that injects the data into the page about/index.\u003c/p>\n      \u003cp>If you want to do a full API implementation you will need: \u003c/p>\n      \u003cul>\n        \u003cli>(1) add the prerender function to the index.page.server.js to tell it what paths to render,\u003c/li>\n        \u003cli>(2) create a custom index.page.route.js if your routes cannot be matched by a single variable in the folder name (you can use @slug as folder name, if your slugs never has a '/' in it), then \u003c/li>\n        \u003cli>(3) the onbeforerender to grab the data, and \u003c/li>\n        \u003cli>(4) finally an index.page.svelte to render the goods.\u003c/li>\n      \u003c/ul>\n\n      \u003cp>Knowing all this, you will see that this \"about\" page demo will only allow you to pull data in for this ONE path the way it is currently coded, but the above instructions would allow you to make an entire site by feeding a list of paths to be rendered to the prerender function, and then making the path name map to a specific page in the pages folder (either by renaming \"about\" to \"@slug\" or to create a index.page.route.js with a function to match paths with the list that prerender funciton has).\u003c/p>\n\n      \u003cp>See the \u003ca href=\"https://vite-plugin-ssr.com/\">vite-plugin-ssr docs for more details\u003c/a>.\u003c/p>\n\n      \u003cp>I like to do a single API call in a file (not demonstrated here) called single-hit.js that does ONLY ONE API call, caches it, and exports the results, so that the above functions can be performed at lightning speeds (if you have a limited number of pages and this won't blow out your memory, I recommend trying it!).\u003c/p>\n    "},"routeParams":{}}}</script>
       </body>
+
+      <noscript>
+        <style>
+          /* allow components to use a .no-js class corresponding with the global.csss file */
+          .no-js {
+            visibility: visible;
+          }
+          /* display a no-javascript banner */
+          html::before {
+            content: 'Please enable JavaScript to use this site!';
+            width:100%;
+            background: red;
+            color: white;
+            height: 60px;
+            font-size: 1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+         }
+        </style>
+      </noscript>
+
     </html>

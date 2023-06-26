@@ -1,29 +1,64 @@
 <!DOCTYPE html>
     <html lang="en">
       <head>
-        <link rel="stylesheet" type="text/css" href="/vite-plugin-ssr-svelte/assets/static/_layout.254de47c.css">
+        <link rel="stylesheet" type="text/css" href="/vite-plugin-ssr-svelte/assets/static/_layout.80e14bac.css">
         <meta charset="UTF-8" />
         <link rel="icon" href="/vite-plugin-ssr-svelte/logo.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Vite Plugin SSR Svelte Project</title><!-- HEAD_svelte-d06px6_START --><meta name="description" content="Demonstration of using the Vite bundler for Svelte projects."><!-- HEAD_svelte-d06px6_END -->
+        <title>Vite-Plugin-SSR-Svelte Project</title><!-- HEAD_svelte-d06px6_START --><meta name="description" content="Vite-based alternative to SvelteKit"><!-- HEAD_svelte-d06px6_END -->
       </head>
       <body>
         <div id="app">
 
-<div class="layout svelte-1f2thvr"><div class="navigation svelte-1f2thvr"><a href="/vite-plugin-ssr-svelte/" class="logo svelte-1f2thvr"><img src="/vite-plugin-ssr-svelte/logo.svg" height="64" width="64" alt="logo"></a>
-    <a class="navitem svelte-1f2thvr" href="/vite-plugin-ssr-svelte/">Home</a>
-    <a class="navitem svelte-1f2thvr" href="/vite-plugin-ssr-svelte/about">About</a></div>
-  <div class="content svelte-1f2thvr"><h1>Welcome</h1>
-  This page is:
+<div class="layout svelte-lblfjd"><div class="navigation svelte-lblfjd"><a href="/vite-plugin-ssr-svelte/" class="logo svelte-lblfjd"><img src="/vite-plugin-ssr-svelte/logo.svg" height="64" width="64" alt="logo"></a>
+    <a class="navitem svelte-lblfjd" href="/vite-plugin-ssr-svelte/">Home</a>
+    <a class="navitem svelte-lblfjd" href="/vite-plugin-ssr-svelte/about">About</a></div>
+  <div class="content svelte-lblfjd"><h1>Welcome to Vite-Plugin-SSR-Svelte!</h1>
+
+  <p>This repo demonstrates how to create a static site using Svelte using Vite
+  &amp; Vite-Plugin-SSR to produce a prerendered site of static pages. The rendering time is blazingly fast and works well on low-powered hardware.</p>
+  <p>Conisder it like an alternative to SvelteKit, but with many of the more
+  complex features disabled by default so you can enable the fancy stuff when you are ready for it.</p>
+
+ <h2>To demonstrate how this works, this page is:</h2>
+
   <ul><li>Rendered to HTML.</li>
-    <li>Prerendered. <button>0</button></li></ul></div>
+    <li>Prerendered. Click counter: <button>0</button></li></ul>
+
+  <h2>Learn More</h2>
+
+  <ul><li><a href="https://github.com/ryanweal/vite-plugin-ssr-svelte">The GitHub repo for this project</a></li>
+    <li><a href="https://ryanweal.github.io/vite-plugin-ssr-svelte/">This demo page hosted on Github Pages</a></li>
+    <li><a href="https://vite-plugin-ssr.com/">Vite-Plugin-SSR docs</a></li></ul></div>
 </div></div>
-        <script type="module" src="/vite-plugin-ssr-svelte/assets/entries/entry-server-routing.76dcb81e.js" defer></script>
-        <link rel="modulepreload" href="/vite-plugin-ssr-svelte/assets/entries/pages_index.page.93510f8d.js" as="script" type="text/javascript">
-        <link rel="modulepreload" href="/vite-plugin-ssr-svelte/assets/chunks/chunk-b636a0bf.js" as="script" type="text/javascript">
-        <link rel="modulepreload" href="/vite-plugin-ssr-svelte/assets/chunks/chunk-98db9973.js" as="script" type="text/javascript">
+        <script type="module" src="/vite-plugin-ssr-svelte/assets/entries/entry-server-routing.45fa8cf7.js" defer></script>
+        <link rel="modulepreload" href="/vite-plugin-ssr-svelte/assets/entries/pages_index.page.41492712.js" as="script" type="text/javascript">
+        <link rel="modulepreload" href="/vite-plugin-ssr-svelte/assets/chunks/chunk-2bcaf281.js" as="script" type="text/javascript">
+        <link rel="modulepreload" href="/vite-plugin-ssr-svelte/assets/chunks/chunk-68c84dc8.js" as="script" type="text/javascript">
         <link rel="modulepreload" href="/vite-plugin-ssr-svelte/assets/entries/pages_default_default.page.client.00038293.js" as="script" type="text/javascript">
         <link rel="modulepreload" href="/vite-plugin-ssr-svelte/assets/chunks/chunk-dbd83a2f.js" as="script" type="text/javascript">
         <script id="vite-plugin-ssr_pageContext" type="application/json">{"pageContext":{"_pageId":"/pages/index","pageProps":"!undefined","routeParams":{}}}</script>
       </body>
+
+      <noscript>
+        <style>
+          /* allow components to use a .no-js class corresponding with the global.csss file */
+          .no-js {
+            visibility: visible;
+          }
+          /* display a no-javascript banner */
+          html::before {
+            content: 'Please enable JavaScript to use this site!';
+            width:100%;
+            background: red;
+            color: white;
+            height: 60px;
+            font-size: 1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+         }
+        </style>
+      </noscript>
+
     </html>
